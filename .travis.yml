@@ -10,4 +10,5 @@ before_install:
   - php -r "unlink('composer-setup.php');"
 install:
   - composer global require phpunit/phpunit ^6.0
-  - composer update
+script:
+  - phpunit ./Test/bootstrap.php
