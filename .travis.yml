@@ -3,6 +3,11 @@ language: php
 php:
   - 7.0
 
+notifications:
+  emails:
+    - tiagorosadacost@gmail.com
+  on_success: always
+
 before_install:
   - sudo apt-get install curl
   - sudo curl -s https://getcomposer.org/installer | php
