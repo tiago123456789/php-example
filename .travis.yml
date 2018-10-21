@@ -7,7 +7,7 @@ before_install:
   - sudo apt-get install curl
   - sudo curl -s https://getcomposer.org/installer | php
   - sudo mv composer.phar /usr/local/bin/composer
-install:
-  - composer global require phpunit/phpunit ^6.0
+before_script:
+  - composer install
 script:
-  - phpunit ./Test/bootstrap.php
+  - ./vendor/bin/phpunit
