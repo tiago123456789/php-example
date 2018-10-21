@@ -1,6 +1,10 @@
 <?php
 
-class HelloWorldTest extends PHPUnit_Framework_TestCase
+namespace Test;
+
+use PHPUnit\Framework\TestCase;
+
+class HelloWorldTest extends TestCase
 {
     /**
      * @var PDO
@@ -9,7 +13,7 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->pdo = new PDO($GLOBALS['db_dsn'], $GLOBALS['db_username'], $GLOBALS['db_password']);
+        $this->pdo = new \PDO($GLOBALS['db_dsn'], $GLOBALS['db_username'], $GLOBALS['db_password']);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->pdo->query("CREATE TABLE hello (what VARCHAR(50) NOT NULL)");
     }

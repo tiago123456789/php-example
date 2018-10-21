@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/3.7/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         backupGlobals="false"
+         verbose="true">
+  <testsuites>
+    <testsuite name="Unit">
+      <directory suffix="Test.php">Tests</directory>
+    </testsuite>
+  </testsuites>
+
+   <php>
+        <var name="db_dsn" value="pgsql:dbname=hello_world_test;host=localhost"/>
+        <var name="db_username" value="postgres"/>
+        <var name="db_password" value=""/>
+    </php>
+</phpunit>
