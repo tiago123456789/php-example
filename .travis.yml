@@ -8,6 +8,10 @@ notifications:
     - tiagorosadacost@gmail.com
   on_success: always
 
+cache:
+  directories:
+    - vendor
+
 before_install:
   - sudo apt-get install curl
   - sudo curl -s https://getcomposer.org/installer | php
